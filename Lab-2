@@ -18,8 +18,8 @@
         \includegraphics[height = 40, width = 200]{Logo.png}
     \end{figure} 
     \rule{\linewidth}{0.5mm} \\
-    \huge {ECE 388: Embedded Design Project } \\ [18pt]
-    \large Automated Greenhouse Management System \\
+    \huge {ECE 256: Foundations of Cyber Security } \\ [18pt]
+    \large Lab 2: File Encryption \\
     \rule{\linewidth}{0.5mm} \\[0.25in]
     \date{}
 }
@@ -32,14 +32,14 @@
 \noindent\begin{tabular}{ll}
 \centering
     \makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
-    \large{Adam Cunningham (acunningham3)} & \large{James McCarthy (jimdog10)}\\[8ex]
+    \large{Adam Cunningham (acunningham3)} & \large{Julia Sorrentino (juliasorrentino)}& \large{Q.C. (uname)}\\[8ex]
 \end{tabular}
 \noindent\begin{tabular}{l}
     \makebox[3in]{\hrulefill}\\
     \large{Ryan McCarthy (rmccarthy3)}\\[20ex]
 \end{tabular}
 
-\date{\Large Submitted: October 19th, 2018 \\ \Large Due: October  19th, 2018} \\[1.25in]
+\date{\Large Submitted: October 24th, 2018 \\ \Large Due: October  24th, 2018} \\[1.25in]
 \thispagestyle{empty}
 \end{center} 
 
