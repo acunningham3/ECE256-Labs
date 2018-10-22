@@ -51,13 +51,16 @@
 \begin{abstract}
 \setlength{\parindent}{0.5in}
 \linespread{1}\selectfont\normalsize\noindent
-\indent 
-
+\indent This lab report includes a basic introduction of the process of cryptography to the lab students. The goal for the lab group is to possess a file from their Raspberry Pi and encrypt that file using shifting encryption or space-based encryption. This file will then be uploaded back to the Pi for the opposing lab group to try and decrypt.
+\indent The group of students are also tasked with the goal of decrypting another lab group's encrypted file.
 
 \end{abstract}
 
 % Introduction
 \section{Introduction}
+Cryptography is the process of changing the characters within a message to keep private information confidential. To another person, this encrypted message would look like a jumble of symbols and letters. Those who have the key to decrypting the file will be able to read and understand its contents. Governments, companies, and virtually anyone can/will use cryptography to protect vital information.\\
+\indent Cryptography can be seen as far back as World War II. Any superpower during the World War would send encrypted information between missionaries. A famous example being Nazi Germany's enigma machine. This machine had billions of combinations of encryption keys and was thought impossible to decode. As history would say, this encryption method was eventually broken by Great Britain to help win the war. Upon decrypting the messages, Great Britain was able to secure vital information about Nazi troops' whereabouts, naval plans, and several other of Germany's strategic tactics.\\
+\indent Nowadays, encryption is largely used to protect online information. When a user inputs credit card information into a website that takes payment, the information that user inserts is quickly encrypted when sent to the server. If anyone bypasses the website's security, these encryptions will keep that user's credit card information secure. Of course, every encryption can, and will be, decrypted eventually.
 
 
 %Methods
