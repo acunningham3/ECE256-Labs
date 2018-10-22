@@ -30,5 +30,5 @@ original_file.write(characters)
 
 original_file.close()
 
-print("Completed")
+print("Encryption Completed")
 
