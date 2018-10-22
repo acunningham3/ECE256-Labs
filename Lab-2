@@ -65,7 +65,27 @@ Cryptography is the process of changing the characters within a message to keep 
 
 %Methods
 \section{Methods and Procedures}
+The first portion of this lab is to extract our file from the Raspberry Pi and then encrypt that file. The original file contents can be found in the Appendix of this lab report.\\
 
+\noindent\textbf{File Encryption:}\\
+Below is the final encryption scheme created by Julia for this file. This algorithm makes use of a shift-based encryption method.
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics{Pictures/Encryption.png}
+    \caption{Code to encrypt original file}
+\end{figure}
+\newpage
+
+\indent After opening the target file, "Group5Lab2.txt", the contents are then read into a string named \textit{var}. Two other variables are also created: an array named \textit{characters} and an integer named \textit{count}. Next a for loop using an incrementor i is created. I will look through the contents of var, character by character, and perform tasks accordingly. In this case, during each iteration, i will first be used to store the ASCII number of the targeted character in var. This number is then shifted by the number stored in count. On the first iteration, count = 0, so the character will remain unchanged. This can also be said for every 8th iteration, because when count is smaller than or equal to 7, count will reset back to 0.\\
+\indent Another important aspect of this for loop is the if statement embedded within. The if statement checks if the ASCII value of i == 10. This statement is used to remove any missing characters that the program is trying to print. The reason for missing characters is because the ASCII code 10 is equivalent to a newline. Newline is not a character so the program doesn't understand what to append to the characters array, thus a missing character is added. If the ASCII code 10 is detected, then the program will change the number to 90 instead.\\
+\indent After the program runs through each and every character of the input file, the file is then closed and the characters from the characters array are written to a new file "target5j.txt". Below is the output encryption of the file.
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = \textwidth] {Pictures/Encrypted-File.png}
+    \caption{Encrypted file after encryption execution}
+\end{figure}
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
