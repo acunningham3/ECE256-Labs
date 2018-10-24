@@ -62,7 +62,6 @@ Cryptography is the process of changing the characters within a message to keep 
 \indent Cryptography can be seen as far back as World War II. Any superpower during the World War would send encrypted information between missionaries. A famous example being Nazi Germany's enigma machine. This machine had billions of combinations of encryption keys and was thought impossible to decode. As history would say, this encryption method was eventually broken by Great Britain to help win the war. Upon decrypting the messages, Great Britain was able to secure vital information about Nazi troops' whereabouts, naval plans, and several other of Germany's strategic tactics.\\
 \indent Nowadays, encryption is largely used to protect online information. When a user inputs credit card information into a website that takes payment, the information that user inserts is quickly encrypted when sent to the server. If anyone bypasses the website's security, these encryptions will keep that user's credit card information secure. Of course, every encryption can, and will be, decrypted eventually.
 
-
 %Methods
 \section{Methods and Procedures}
 The first portion of this lab is to extract our file from the Raspberry Pi and then encrypt that file. The original file contents can be found in the Appendix of this lab report.\\
@@ -111,5 +110,31 @@ Below is the final encryption scheme created by Julia for this file. This algori
 
 % Appendices
 \section{Appendix}
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics{Pictures/Original-File.png}
+    \caption{Original text file extracted from Raspberry Pi}
+\end{figure}
+
+\begin{table}[h!]
+    \centering
+        \begin{tabular}{|ll|ll|ll|}
+        \hline
+        Dec & Char & Dec & Char & Dec & Char \\ \hline
+        33  & !    & 64  & @    & 97  & a    \\
+        34  & "    & 65  & A    & 98  & b    \\
+        35  & \#   & 66  & B    & 99  & c    \\
+        36  & \$   & 67  & C    & 100 & d    \\
+        37  & \%   & 68  & D    & 101 & e    \\
+        38  & \&   & 69  & E    & 102 & f    \\
+        39  & '    & 70  & F    & 103 & g    \\
+        40  & (    & 71  & G    & 104 & h    \\
+        41  & )    & 72  & H    & 105 & i    \\
+        \hline
+        \end{tabular}
+    \caption{Small portion of an ASCII Table}
+    \label{my-label}
+\end{table}
 
 \end{document}
