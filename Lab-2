@@ -32,7 +32,7 @@
 \end{tabular}
 \noindent\begin{tabular}{l}
     \makebox[3in]{\hrulefill}\\
-    \large{Quintin Carvalho (username)}\\[20ex]
+    \large{Quintin Carvalho (Quintin Carvalho)}\\[20ex]
 \end{tabular}
 
 \date{\Large Submitted: October 24th, 2018 \\ \Large Due: October  24th, 2018} \\[1.25in]
@@ -67,7 +67,7 @@ Cryptography is the process of changing the characters within a message to keep 
 \section{Methods and Procedures}
 The first portion of this lab is to extract our file from the Raspberry Pi and then encrypt that file. The original file contents can be found in the Appendix of this lab report.\\
 
-\noindent\textbf{File Encryption:}\\
+\subsection{File Encryption}
 Below is the final encryption scheme created by Julia for this file. This algorithm makes use of a shift-based encryption method.
 
 \begin{figure} [h!]
@@ -103,12 +103,31 @@ Decrypting the file that the user just encrypted should just involve doing the o
 \subsection{Decrypting the Assigned Team’s File}
 The first step of decrypting the assigned team’s file is to secure the file. To do this the user must login to the other team’s raspberry pi and  use the get command to bring it into their own raspberry pi. In the terminal they must type \textit {sftp -P 2204 pi@134.88.48.68} this means secure file transfer port 2204 (the other team’s specified port) and the ip address of the pi. To copy the file to their own pi they must use the command \textit {get target4.txt}. By typing “exit” or “quit” will allow the user to leave the pi and go back into the Linux environment. Here they are able to open to file into a text editor using \textit {gedit target4.txt}.
 \newline \tab Once the team has transferred the target file into their own account they can begin running different decryption algorithms to decrypt the message. They should use the programming language, Python, to write their algorithm. They should use the output of their algorithms to find a pattern and try to use it to decrypt the message by hand. Then they can write a program that emulates the pattern to completely decrypt the file. \\
+\indent Now begins the process of decrypting the target file. Below is a python script that will accurately decrypt the target file.\\
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = 200]{Pictures/Target-Decryption.png}
+    \caption{Code to decrypt target file}
+\end{figure}
+
+As described in the laboratory experiment results, the encrypted file has a few specific patterns that the group of students were able to discover. One being that every other character is an exclamation point. This provokes the use of the if statement \textit{if i != 33}. Using this statement will tell the program to omit any characters that resemble an exclamation point. Furthermore, a shifting pattern was also discovered upon hand writing the ASCII characters from the encrypted file. This pattern shifted the first character backward by 7, the second character backward by 4, the third character backward by 6, and the fourth character backward by 7. Although not every character was tested by hand, the students saw it safe to assume that this pattern looped throughout.\\
+\indent As seen in the script above, these four different conditions are met through the use of several if statements. Throughout the for loop of this program, a variable \textit{reset} is conditioned to keep track of the amount of shifts completed. After each shift, a 1 is added to the total value of the variable. Once this variable reaches a certain number, in this case 4, the reset variable will be brought back down to a value of 1, thus repeating the sequence again. Through these iterations a couple of different operations are completed: when the reset variable equals 1 the ASCII value will be shifted backward by 7, when the reset variable equals 2 the ASCII value will be shifted backward by 4, when the reset variable equals 3 the ASCII value will be shifted backward by 6, and when the reset variable equals 4 the ASCII value will be shifted backward by 7. \\
+\indent Upon execution of this program through the LINUX terminal, the target file will be successfully decrypted and a new file named "decrypted4.txt" will be created. Inside this text file will include the original passage, \textit{Song of Myself by Walt Whitman} The decrypted file is shown in the laboratory experimental results.
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
 This entire lab revolved around the use of the programming language, Python. Encryption is extremely important in computer security as to secure data from sources trying to steal valuable information. The exact encryption used can be seen in figure 1 in the appendix. This is the same that was explained in the methods section, but with different variable names. In addition, the exact decryption used can be seen in figure 2 in the appendix. Again, it is the same as explained in the methods, but with different variable names. By using a simple Caesar cipher students are able to observe how it changes a file, as well as how to change that file back to its original form. 	
-\newline \tab Upon first glance of team four’s encrypted file it was quite noticeable that every other character was an exclamation point. This was taken into account, and the code that was written to decrypt the message turned every exclamation point into a null. When attempting to decrypt the rest of the file the team began just testing a single shift and noticed that when shifted left seven there were spaces and possible pieces of words. Due to the fact that each team had a poem every file’s first should be title, author. From this information the partially decrypted file told that their author’s first name was four letters, possibly starting with a “W”. In addition, the last name was seven characters, possibly ending in “an”. This information was taken into account and upon doing a quick Google search for famous poets. The name, Walt Whitman, was found and when looking at his famous poems it was known that the title had three words, the first having four characters, second having two characters and third having six characters. It was quickly found that Whitman’s poem “Song of Myself” fit the description. Using this information the first two lines of the poem were written out and the pattern of shifts to be left seven, four, six and seven. Now that the pattern was found all that was needed is to write code that would take this information into effect to decrypt the file on the computer.
+\newline \tab Upon first glance of team four’s encrypted file it was quite noticeable that every other character was an exclamation point. This was taken into account, and the code that was written to decrypt the message turned every exclamation point into a null. When attempting to decrypt the rest of the file the team began just testing a single shift and noticed that when shifted left seven there were spaces and possible pieces of words. Due to the fact that each team had a poem every file’s first should be title, author. From this information the partially decrypted file told that their author’s first name was four letters, possibly starting with a “W”. In addition, the last name was seven characters, possibly ending in “an”. This information was taken into account and upon doing a quick Google search for famous poets. The name, Walt Whitman, was found and when looking at his famous poems it was known that the title had three words, the first having four characters, second having two characters and third having six characters. It was quickly found that Whitman’s poem “Song of Myself” fit the description. Using this information the first two lines of the poem were written out and the pattern of shifts to be left seven, four, six and seven. Now that the pattern was found all that was needed is to write code that would take this information into effect to decrypt the file on the computer. \\
+\indent A code was quickly written to account for these very specific shifts. After much testing with undesirable results, a final, successful, script was implemented. This python script would shift each letter a certain amount of spaces and account for the exclamation points that occurred every other character. A portion of the final decryption can be found below.
 
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = 400]{Pictures/Decrypted-File.png}
+    \caption{Final decryption of the target file}
+\end{figure}
+
+Through full completion of this lab, the students have gained a great amount of experience working within the python to encrypt and decrypt files as well as becoming acquainted with using the Raspberry Pis.
 
 % Discussion
 \section{Discussion}
@@ -116,10 +135,7 @@ Almost every piece of this lab required students to write a python script.  The 
 
 % Conclusion
 \section{Conclusion}
-Although time consuming, this lab was found to be a simple look into encrypting and decrypting files.
-
-In addition, it allowed students to begin working with the Raspberry Pi as the device will be used throughout the rest of the semester. Overall, the experiences from this lab will greatly benefit the group of students for further lab reports and classes.
-
+Although time consuming, this lab was found to be a simple look into encrypting and decrypting files. This lab also gives powerful insight into the world that is cryptography. As seen with this lab group's trivial programs, cryptography can easily, and quickly, become complex. Imagine how extreme business and government cryptography methods would be at this point in history. In addition, it allowed students to begin working with the Raspberry Pi as the device will be used throughout the rest of the semester. Overall, the experiences from this lab will greatly benefit the group of students for further lab reports and classes.
 
 % Recommendations
 \section{Recommendations}
@@ -130,6 +146,7 @@ I would highly recommend that every student to get comfortable and familiar with
 I, Julia Sorrentino, had a difficult time completing this lab. During the first week of this lab I found myself clueless about writing an encryption in python. The first lab period was spent trying to write a key stream cipher that we recognized on the PowerPoint. However, it became clear to me that I did not understand how they worked and I was merely copying other people’s work from online sources. It was after this that I decided that we had to go much simpler with our encryption. I spent the next week teaching myself the basics of Python and how to create a simple Caesar cipher via YouTube videos and other online sources listed in the reference section. 
 \newline \tab The second lab period was spent creating a much more complicated Caesar cipher. This can be seen in figure 7 in the appendix. The idea was to not have a constant shift so every time through the loop we added one more shift to the right. The problem soon arose that the characters went out of bounds of ASCII. This caused us to create a function that reset the count to one when the shift put the character out of range. The character that would have been out of range was shifted left two. We soon encountered another problem that the ASCII for a new line is 10. This means that when it was shifted we had a command as opposed to a character. When this was printed out it appeared as a box with a question mark in it. To move around this problem we brute forced each new line to the character n. Later, I realized this would be part of the problem in not being able to decipher the encrypted file. After spending several days and countless hours attempting to decipher our own file I could not decipher more than the first line. I came to the conclusion that it was most likely impossible and returned to the drawing board. 
 \newline \tab Once again I began with a simple Caesar cipher that shifted each character right two. I decided that this would be too easily decrypted by other teams so I created a count to change the shift. This was used as our final encryption as shown in figure 1. Although the Caesar cipher is not super complicated I knew another team was waiting to decrypt our file and I figured it was better to have a working encryption and decryption rather than not having anything to turn in. Overall, I found this lab to be very time consuming, but the more time I put into it the more I understood what I was doing. For this reason I found it helpful in learning python and encrypting/decrypting files.
+\indent I, Adam Cunningham, worked with Julia on the first implementation of the encryption script. This first script was successful at encrypting the file, but it was so complex that we couldn't decrypt it ourselves. Thus, it was scraped and changed to a simpler one that Julia created. Afterwards I helped Julia to create a script to decrypt our target file. She had already discovered the encryption that group 4 used to code their file. She gave me what work she had with the character shifts and I went to work writing the decryption script. Mainly, creating and debugging the script wasn't very difficult. The shifts were straight forward to reverse engineer. It did, however, take a little more troubleshooting and debugging than I was expecting. Such errors with index ranges and index types are what confused me the most. At last I was able to execute the program and completely decrypt the target file with pinpoint accuracy.
 
 % References 
 \section{References}
