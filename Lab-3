@@ -15,7 +15,7 @@
 \title{\vspace{-3cm}
     \rule{\linewidth}{0.5mm} \\
     \huge {ECE 256: Foundations of Cyber Security } \\ [18pt]
-    \large Lab 2: File Encryption \\
+    \large Lab 3: DDoS Attacks \\
     \rule{\linewidth}{0.5mm} \\[0.25in]
     \date{}
 }
@@ -35,7 +35,7 @@
     \large{Quintin Carvalho (Quintin Carvalho)}\\[20ex]
 \end{tabular}
 
-\date{\Large Submitted: October 24th, 2018 \\ \Large Due: October  24th, 2018} \\[1.25in]
+\date{\Large Submitted: November 12th, 2018 \\ \Large Due: November 12th, 2018} \\[1.25in]
 \thispagestyle{empty}
 \end{center} 
 
@@ -51,8 +51,7 @@
 \begin{abstract}
 \setlength{\parindent}{0.5in}
 \linespread{1}\selectfont\normalsize\noindent
-\indent This lab report includes a basic introduction of the process of cryptography to the lab students. The goal for the lab group is to possess a file from their Raspberry Pi and encrypt that file using shifting encryption or space-based encryption. This file will then be uploaded back to the Pi for the opposing lab group to try and decrypt.
-\indent The group of students are also tasked with the goal of decrypting another lab group's encrypted file.
+\indent This lab report includes a basic introduction of the process of distributed denial of service (DDoS) attacks to the lab students. The goal for the lab group is to create a webserver and defend it.
 
 \end{abstract}
 
