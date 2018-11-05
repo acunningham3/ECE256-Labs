@@ -5,10 +5,11 @@ import SocketServer
 import os
 import sys
 
-PORT = int(sys.argv[1])
+HOST = sys.argv[1]
+PORT = int(sys.argv[2])
 
 Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-httpd = SocketServer.TCPServer(("", PORT), Handler)
+httpd = SocketServer.TCPServer((HOST, PORT), Handler)
 
 print "Serving at port", PORT
 httpd.serve_forever()
