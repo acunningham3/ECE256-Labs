@@ -5,7 +5,7 @@ import SocketServer
 import os
 import sys
 
-PORT = sys.argv[1]
+PORT = int(sys.argv[1])
 
 Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
 httpd = SocketServer.TCPServer(("", PORT), Handler)
