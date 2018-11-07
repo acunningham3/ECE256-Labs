@@ -51,7 +51,7 @@
 \begin{abstract}
 \setlength{\parindent}{0.5in}
 \linespread{1}\selectfont\normalsize\noindent
-\indent This lab report includes a basic introduction of the process of distributed denial of service (DDoS) attacks to the lab students. The goal for the lab group is to create a webserver and defend it.
+\indent  This lab report includes a basic introduction of the process of distributed denial of service (DDoS) attacks to the lab students. This lab consisted of three main parts completed over several weeks. The goal for the first week was for the lab group to create a web server and defend it. The web server must be built using Python and run on the Raspberry Pi. The second week of the lab consisted of writing a DDoS attack script using Python. This script will target other groups servers in an attempt to take them down. The final piece of the lab requires the completion of the first two parts. During lab class all groups will attack the student's server. In addition, each group will attack each other individually. These attacks will be timed and it will be recorded which servers crash and which withstand the attacks. Overall this lab will introduce students to writing DDoS attack and defense python scripts.
 
 \end{abstract}
 
