@@ -60,11 +60,17 @@
 
 %Methods
 \section{Methods and Procedures}
+This lab resulted in the creation of three python scripts. One created a web server, one pinged a server to see if it was up or down, and one attacks other groups servers. All python scripts must begin with \textit{\#!/bin/python}. The next few lines will contain any libraries that need to be imported. Then the main program will begin.
 
 \subsection{Creating a Webserver}
 
 \subsection{Pinging a Server}
-
+Pinging a server is an important ability for an attacker and a server owner. The owner will want to make sure that their server has not been taken down by an attack while the attacker will want to know when their target server has fallen. The students created a python script which printed to the user every two seconds if the server they selected is up or down. The script begins with five imports: os, time, socket, urllib2, and sys. Each of these allows the programmer to use special commands within the language. The program takes two inputs; the first is the ip address of the target and the second is the port of the target. The script is made of the function internet\_on. The program will continue to run through this function until it is manually stopped or the program times out. As shown in the figure below the program uses a try, except statement. The function will try to open the server at the port and if it can it will print that the port is up. If it cannot connect then it will print that the server is done. The code: \textit{time.sleep(2)} pauses the program for two seconds before running again.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.35\textwidth]{ping.PNG}
+    \caption{Python Code for Server Ping}
+\end{figure}
 \subsection{Creating a DDoS Attack}
 
 \subsection{Battle Royale}
