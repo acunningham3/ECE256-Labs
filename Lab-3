@@ -74,6 +74,7 @@ Pinging a server is an important ability for an attacker and a server owner. The
 \subsection{Creating a DDoS Attack}
 
 \subsection{Battle Royale}
+During lab class of the third week of working on the lab each groups server will be tested to show the capabilities of their attack and defense. To test their defense all other groups will attack the server at once. The attack will last for a time specified by the TA. If the server is still running after this time then the group will have proven their defense works. To test the attack capabilities of the group, they will attack all the other groups once at a time and tally how many groups they are able to crash.  he attack will last for a time specified by the TA. If the server is not running after this time has expired then the group will have proven their attack works.
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
