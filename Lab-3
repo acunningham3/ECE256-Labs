@@ -84,7 +84,8 @@ Through full completion of this lab, the students have gained a great amount of 
 
 % Discussion
 \section{Discussion}
-Almost every piece of this lab required students to write a python script. 
+\section{Discussion}
+Every piece of this lab required students to write a python script. The students found themselves looking up a myriad of commands within the language as well as a plethora of libraries such as os, time, socket, urllib2, and sys. This lab requires a lot of research online as well as a lot of trial and error. Due to this it is very helpful to seek help from another group, the TA, or even the professor.
 
 % Conclusion
 \section{Conclusion}
