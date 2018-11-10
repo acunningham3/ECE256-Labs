@@ -57,6 +57,18 @@
 
 % Introduction
 \section{Introduction}
+A DOS (Denial of Service) attack is used to deny intended users access to a specific server or website. Through flooding the server's resources, or breaking the server's inner mechanics, the server is brought offline, thus giving users an error code or denying any access to the website itself.
+\indent Symptoms that a service is currently experiencing, or has experienced, a DOS attack include: 
+\begin{itemize}
+    \item Slow access to website / file access or transfer
+    \item Inability to access a website
+    \item Disconnection of wired or wireless connection
+\end{itemize} \\
+
+Several web services that give anyone the ability to DOS anything are currently available online. As well as countless amounts of DOS programs and code that others have uploaded on the internet for anyone to use. Most of these systems use a single, or a handful of attacking methods to ruin the accessibility of the designated webserver. The most common example of a flood could be the ICMP Flood. This attack sends millions of modified packets to the targeted IP address or webserver to use up it's resources and put if offline. \\
+\indent If the target is a larger service or server then the attacker might want to make use of a botnet or a distributed attack to take down the service. A distributed attack takes the resources from multiple computers to run the attack on the targeted webserver. Theoretically, with enough power from a multitude of computers, an attacker could take down even the largest of websites and services. \\
+\indent Another popular method of flooding a server is a Synchronous Flood Attack. A webserver usually communicates with requests from a computer by sending an Acknowledgement after that computer sends the server a SYN. The way a SYN flood works is that the program will open several SYN/ACK connections that are only half completed, i.e the webserver doesn't get the chance to send the program an acknowledgement back. As the amount of half connections increases, the webserver will slow to a halt. \\
+\indent Services such as CloudFlare help website owners to protect against DOS attacks at a very successful rate. However, there are standalone techniques to protect against DOS attacks. An effective method is to redirect the IP address that is found to be sending, or requesting, a massive amount of damage to the server. This can easily be bypassed through IP spoofing however. Other cloaks can be used to monitor the incoming traffic before giving the user access to the website. If this user is found suspicious then the server will deny entry through a filtering service.
 
 %Methods
 \section{Methods and Procedures}
