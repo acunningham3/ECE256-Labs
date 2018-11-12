@@ -81,7 +81,7 @@ client-connection.close()}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1.45\textwidth]{webserver.png}
+    \includegraphics[width=1.45\textwidth]{Webserver.png}
     \caption{Python Code for Web Server}
 \end{figure}
 
@@ -91,7 +91,7 @@ Pinging a server is an important ability for an attacker and a server owner. The
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.35\textwidth]{ping.PNG}
+    \includegraphics[width=0.35\textwidth]{Ping.png}
     \caption{Python Code for Server Ping}
 \end{figure}
 
@@ -100,7 +100,7 @@ The final task for this lab was to create a Denial of Service attack and use tha
 
 \begin{figure} [h!]
     \centering
-    \includegraphics[width = \textwidth] {Attack-Headers.png}
+    \includegraphics[width = \textwidth]{Attack-Headers.png}
     \caption{DOS Machine Headers}
 \end{figure} \\
 
@@ -174,14 +174,18 @@ Every piece of this lab required students to write a python script. The students
 
 % Conclusion
 \section{Conclusion}
+The lab group was able to successfully implement a functional webserver within the Python scripting work space. As well as, a pinging program to check the connect of a URL with a port number, and a base attack using URL requests. Aspects such as the attack and webserver became clear after researching some Python information. The Socket package and URLlib2 package proved extremely useful for the webserver and ping commands. The attack made use of the threading, os, socket, and random packages. This lab proved useful for gaining important information on how DOS attacks work and how programs are set in place to keep them at bay. Other information, such as HTTP scripting and webserver creation, will be helpful for the students in their future of Python programming.
 
 % Recommendations
 \section{Recommendations}
+Clearly, this lab anticipated that the lab students knew a lot about socket and HTTP scripting using Python beforehand. We would recommend researching various information about creating webservers in Python. As well as how to use the URL, socket, and OS libraries. Having prior knowledge of these packages as well as their basic inner workings will greatly help in setting up a functional webserver. If we had this information before this lab we would have had more time to focus on how to setup security implementations for the webserver itself.
 
 % Laboratory reflection
 \section{Laboratory reflection}
 I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal of time trying to teach myself how to create a DDoS attack and defense via YouTube videos and other online sources listed in the reference section. I spent hours taking notes, however found very few examples online to use as a basis for creating our scripts. Overall, I found this lab to be very time consuming, but opposed to previous labs, the more time I put into it I still did not understand what I was doing. 
-\newline\indent I, Adam Cunningham, 
+
+I, Adam Cunningham, found an immense amount of excite in programming and testing for this lab. Albeit, I found the aspects of creating a webserver and figuring out how to ping that webserver annoying and boring, the aspect of attacking other webservers using a code that I created is really interesting to me. This lab gave me great experience with traveling around in different file spaces (rasperberry pi / linux communications) and Python scripting. The realm of Python webserver programming and URL/HTTP scripting is really fascinating. I hope that the experience that I gained from this lab will help me in the near future, either with this class, or a career position.
+
 \newline I, Quintin Carvalho, found this lab very interesting but very difficult to implement as well. I had to do allot of research in order to be able to understand the code and I feel that I now have a better understanding but am still confused on certain things. I will have to keep on trying to learn this material and not give up because it is very important and crucial that I have these skills for when I get a job.
 % References 
 \section{References}
