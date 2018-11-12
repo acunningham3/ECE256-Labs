@@ -75,9 +75,17 @@ Several web services that give anyone the ability to DOS anything are currently 
 This lab resulted in the creation of three python scripts. One created a web server, one pinged a server to see if it was up or down, and one attacks other groups servers. All python scripts must begin with \textit{\#!/bin/python}. The next few lines will contain any libraries that need to be imported. Then the main program will begin.
 
 \subsection{Creating a Webserver}
-
+Creating a server is an important skill for someone to understand and master. Creating a web server in python is a fairly easy task and if you have right hardware you can create a fairly decent server. To create a server in python, using the socket module is the backbone of most python web service modules. All network transactions happen between clients and servers. In most protocols the clients asks a certain address and receive data. Within each address multiple servers can run at the same time however, the limit to how many is in the hardware. Each service is associated with a port and each port is bound to a socket. The server then listens to its associated port and outputs information when requests are received on that port. To affect a network connection you need to know the host name and the port number. Most web servers run on port 80 however to avoid conflict our server will run on port 8080. If these port numbers are used you need to find a new port number and notify the user of the change. As long as the client ask for the correct service on the right port at the right address, communication will still happen. To begin with the code for creating a socket the first step is to import the socket libraries using the \textit{import socket} command. Next the server needs to know the host to which it is to be associated to and which port to listen on. Therefore, \textit{Host} and \textit{Port} were both set equal to our respected arguments taken in by the system. Whether to request information or to serve it, in order to access the internet, we need to create a socket. The syntax for this call is \textit{[variable] = socket.socket([family],[type])}. As shown in our web server code below our socket followed this syntax: \textit{SocketServer.TCPServer((Host,Port),Handler)}. There is a print statement, \textit{print "serving at port", Port} to show which port we are serving on along with a command to continue serving the client, \textit{httpd.serve-forever()}. Lastly, as the closing acts of the request we need to close the file object and the server client. \textit{client-connection.sendall(http-response)
+client-connection.close()}.
+\pagebreak
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1.45\textwidth]{webserver.png}
+    \caption{Python Code for Web Server}
+\end{figure}
 \subsection{Pinging a Server}
 Pinging a server is an important ability for an attacker and a server owner. The owner will want to make sure that their server has not been taken down by an attack while the attacker will want to know when their target server has fallen. The students created a python script which printed to the user every two seconds if the server they selected is up or down. The script begins with five imports: os, time, socket, urllib2, and sys. Each of these allows the programmer to use special commands within the language. The program takes two inputs; the first is the ip address of the target and the second is the port of the target. The script is made of the function internet\_on. The program will continue to run through this function until it is manually stopped or the program times out. As shown in the figure below the program uses a try, except statement. The function will try to open the server at the port and if it can it will print that the port is up. If it cannot connect then it will print that the server is done. The code: \textit{time.sleep(2)} pauses the program for two seconds before running again.
+\pagebreak
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\textwidth]{ping.PNG}
@@ -96,7 +104,6 @@ Through full completion of this lab, the students have gained a great amount of 
 
 % Discussion
 \section{Discussion}
-\section{Discussion}
 Every piece of this lab required students to write a python script. The students found themselves looking up a myriad of commands within the language as well as a plethora of libraries such as os, time, socket, urllib2, and sys. This lab requires a lot of research online as well as a lot of trial and error. Due to this it is very helpful to seek help from another group, the TA, or even the professor.
 
 % Conclusion
@@ -109,7 +116,7 @@ Every piece of this lab required students to write a python script. The students
 \section{Laboratory reflection}
 I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal of time trying to teach myself how to create a DDoS attack and defense via YouTube videos and other online sources listed in the reference section. I spent hours taking notes, however found very few examples online to use as a basis for creating our scripts. Overall, I found this lab to be very time consuming, but opposed to previous labs, the more time I put into it I still did not understand what I was doing. 
 \newline\indent I, Adam Cunningham, 
-
+\newline I, Quintin Carvalho, found this lab very interesting but very difficult to implement as well. I had to do allot of research in order to be able to understand the code and I feel that I now have a better understanding but am still confused on certain things. I will have to keep on trying to learn this material and not give up because it is very important and crucial that I have these skills for when I get a job.
 % References 
 \section{References}
 [1] Labs, Wallaroo. DDoS Attack Detection with Wallaroo: A Real-Time Time Series Analysis \newline \tab Example, blog.wallaroolabs.com/2017/11/ddos-attack-detection-with-wallaroo-a-real-\newline \tab time-time-series-analysis-example/.
@@ -118,6 +125,10 @@ I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal 
 \noindent[2] “DoS (Denial of Service) Attack Tutorial: Ping of Death, DDOS.” Meet Guru99 - \newline \tab Free Training Tutorials & Video for IT Courses, www.guru99.com/ultimate-guide-to-dos\newline \tab -attacks.html.
 
 \noindent[3] Zamurai™. “How to DDoS Using Scripts (Python/Perl) *2018*.” YouTube, YouTube, 29 \newline \tab Sept. 2016, www.youtube.com/watch?v=kMsFlbPtSCI.
+
+\noindent[4] Ruslan's Blog - Lets Build a Web server
+\newline \tab https://ruslanspivak.com/lsbaws-part1/
+
 \newpage
 
 % Appendices
