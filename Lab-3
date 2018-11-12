@@ -4,6 +4,10 @@
 \usepackage{times}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 
 \linespread{1}
 \setlength{\parindent}{0.5in}
@@ -81,7 +85,7 @@ client-connection.close()}.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1.45\textwidth]{Webserver.png}
+    \includegraphics[width = 250]{Webserver.png}
     \caption{Python Code for Web Server}
 \end{figure}
 
@@ -91,16 +95,19 @@ Pinging a server is an important ability for an attacker and a server owner. The
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.35\textwidth]{Ping.png}
+    \includegraphics[width = 250]{Ping.png}
     \caption{Python Code for Server Ping}
 \end{figure}
+
+\newpage
 
 \subsection{Creating a DDoS Attack}
 The final task for this lab was to create a Denial of Service attack and use that to take down other lab groups' webservers. Below is a portion of the full implementation.
 
+
 \begin{figure} [h!]
     \centering
-    \includegraphics[width = \textwidth]{Attack-Headers.png}
+    \includegraphics[width = 400]{Attack-Headers.png}
     \caption{DOS Machine Headers}
 \end{figure} \\
 
@@ -109,7 +116,7 @@ This next section of the code shows the execution portion of the script.
 
 \begin{figure} [h!]
     \centering
-    \includegraphics[width = \textwidth]{Attack-Execution.png}
+    \includegraphics[width = 250]{Attack-Execution.png}
     \caption{DOS Execution Commands}
 \end{figure} \\
 
@@ -187,6 +194,7 @@ I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal 
 I, Adam Cunningham, found an immense amount of excite in programming and testing for this lab. Albeit, I found the aspects of creating a webserver and figuring out how to ping that webserver annoying and boring, the aspect of attacking other webservers using a code that I created is really interesting to me. This lab gave me great experience with traveling around in different file spaces (rasperberry pi / linux communications) and Python scripting. The realm of Python webserver programming and URL/HTTP scripting is really fascinating. I hope that the experience that I gained from this lab will help me in the near future, either with this class, or a career position.
 
 \newline I, Quintin Carvalho, found this lab very interesting but very difficult to implement as well. I had to do allot of research in order to be able to understand the code and I feel that I now have a better understanding but am still confused on certain things. I will have to keep on trying to learn this material and not give up because it is very important and crucial that I have these skills for when I get a job.
+
 % References 
 \section{References}
 [1] Labs, Wallaroo. DDoS Attack Detection with Wallaroo: A Real-Time Time Series Analysis \newline \tab Example, blog.wallaroolabs.com/2017/11/ddos-attack-detection-with-wallaroo-a-real-\newline \tab time-time-series-analysis-example/.
@@ -194,16 +202,20 @@ I, Adam Cunningham, found an immense amount of excite in programming and testing
 
 \noindent[2] “DoS (Denial of Service) Attack Tutorial: Ping of Death, DDOS.” Meet Guru99 - \newline \tab Free Training Tutorials & Video for IT Courses, www.guru99.com/ultimate-guide-to-dos\newline \tab -attacks.html.
 
-\noindent[3] Zamurai™. “How to DDoS Using Scripts (Python/Perl) *2018*.” YouTube, YouTube, 29 \newline \tab Sept. 2016, www.youtube.com/watch?v=kMsFlbPtSCI.
-
-\noindent[4] Ruslan's Blog - Lets Build a Web server
+\noindent[3] Ruslan's Blog - Lets Build a Web server
 \newline \tab https://ruslanspivak.com/lsbaws-part1/
+
+\noindent[4] Zamurai™. “How to DDoS Using Scripts (Python/Perl) *2018*.” YouTube, YouTube, 29 \newline \tab Sept. 2016, www.youtube.com/watch?v=kMsFlbPtSCI.
 
 \newpage
 
 % Appendices
 \section{Appendix}
 
-
+\begin{figure} [h!]
+    \centering
+    \includegraphics{Attack-Threading.png}
+    \caption{DOS attack threading}
+\end{figure}
 
 \end{document}
