@@ -121,11 +121,55 @@ During lab class of the third week of working on the lab each groups server will
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
 This entire lab revolved around the use of the programming language, Python. Defending a web server from a DDoS attack is extremely important in computer security as to websites from being crashed from unwanted predators. The exact web server used can be seen in figure 1 in the appendix. This is the same that was explained in the methods section. In addition, the exact DDoS attack used can be seen in figure 2 in the appendix. Again, it is the same as explained in the methods. By using a Smurf attack students are able to send large amounts of internet control message protocol (ICMP) ping traffic to the target server. The reply address is spoofed to the intended victim. Due to the fact that a single internet broadcast address can support a maximum of 255 hosts a smurf attack amplifies a single ping 255 times. This results in the network being slowed down to a point where it is impossible to use. 	
-\newline \tab 
+\newpage
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l}
+    Test Made                                                             & Pass                & Fail      \\ \hline \hline
+    Run webserver is python                                               & \centering{\cmark}  &           \\
+    Take in port number as argument, setup server with that specific port & \centering{\cmark}  &           \\
+    Set hostname and port simultaneously using arguments                  & \centering{\cmark}  &           \\
+    Connect to URL through web browser                                    & \centering{\cmark}  &           \\
+    Add security to defend incoming attacks                               &                     & \centering{\xmark}
+    \end{tabular}
+    \caption{Python webserver test plan}
+\end{table} \\
+
+Above is a table showing the various tests conducted while trying to set up a webserver using Python. The only testing that failed was the addition of security to the webserver. This failed because the lab students did not heavily focus on security of their webserver compared with other parts of this lab. \\
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l}
+    Test Made                                                   & Pass                & Fail      \\ \hline \hline
+    Test server connection with host and port as arguments      & \centering{\cmark}  &           \\
+    Print back status of server                                 & \centering{\cmark}  &           \\
+    Print back status of a slower server (change timeout)       &                     & \centering{\xmark}
+    \end{tabular}
+    \caption{Pinging the webserver test plan}
+\end{table} \\
+
+This test plan was much simpler since the lab students only needed to find a way to test the current connect of their own webserver. Through the use of the URL library 2 this proved relatively easy. Unfortunately, with a timeout of 1 second, the ping program wouldn't be able to ping servers that are running at a slower speed. This was changed in the future implementation. \\
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{l|l|l}
+    Test Made                                                             & Pass                & Fail      \\ \hline \hline
+    Send large amounts of data to specified URL     & \centering{\cmark}  &           \\
+    Crash our webserver using attack                &                     & \xmark    \\
+    Crash other groups' webserver using attack      &                     & \xmark    \\
+    Slow webservers using attack                    & \centering{\cmark}  &           
+    \end{tabular}
+    \caption{DOS attack test plan}
+\end{table} \\
+
+As shown, the attack implemented by the lab group was unsuccessful at crashing any targeted webserver. However, the attack was able to send a large enough amount of requests to slow a webserver to upwards of a 10 second load time.
+
 Through full completion of this lab, the students have gained a great amount of experience working within python to create DDoS defensive and offensive scripts as well as becoming acquainted with using their Raspberry Pis to connect to other groups.
 
 % Discussion
 \section{Discussion}
+A lot of the information within this lab project was unbeknownst to the students themselves. The lab group would constantly have to look up certain commands to help them with their tasks. It seemed as if this certain lab required a lot more previous knowledge than anticipated. \\
 Every piece of this lab required students to write a python script. The students found themselves looking up a myriad of commands within the language as well as a plethora of libraries such as os, time, socket, urllib2, and sys. This lab requires a lot of research online as well as a lot of trial and error. Due to this it is very helpful to seek help from another group, the TA, or even the professor.
 
 % Conclusion
