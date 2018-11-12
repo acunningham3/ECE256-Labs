@@ -78,20 +78,42 @@ This lab resulted in the creation of three python scripts. One created a web ser
 Creating a server is an important skill for someone to understand and master. Creating a web server in python is a fairly easy task and if you have right hardware you can create a fairly decent server. To create a server in python, using the socket module is the backbone of most python web service modules. All network transactions happen between clients and servers. In most protocols the clients asks a certain address and receive data. Within each address multiple servers can run at the same time however, the limit to how many is in the hardware. Each service is associated with a port and each port is bound to a socket. The server then listens to its associated port and outputs information when requests are received on that port. To affect a network connection you need to know the host name and the port number. Most web servers run on port 80 however to avoid conflict our server will run on port 8080. If these port numbers are used you need to find a new port number and notify the user of the change. As long as the client ask for the correct service on the right port at the right address, communication will still happen. To begin with the code for creating a socket the first step is to import the socket libraries using the \textit{import socket} command. Next the server needs to know the host to which it is to be associated to and which port to listen on. Therefore, \textit{Host} and \textit{Port} were both set equal to our respected arguments taken in by the system. Whether to request information or to serve it, in order to access the internet, we need to create a socket. The syntax for this call is \textit{[variable] = socket.socket([family],[type])}. As shown in our web server code below our socket followed this syntax: \textit{SocketServer.TCPServer((Host,Port),Handler)}. There is a print statement, \textit{print "serving at port", Port} to show which port we are serving on along with a command to continue serving the client, \textit{httpd.serve-forever()}. Lastly, as the closing acts of the request we need to close the file object and the server client. \textit{client-connection.sendall(http-response)
 client-connection.close()}.
 \pagebreak
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=1.45\textwidth]{webserver.png}
     \caption{Python Code for Web Server}
 \end{figure}
+
 \subsection{Pinging a Server}
 Pinging a server is an important ability for an attacker and a server owner. The owner will want to make sure that their server has not been taken down by an attack while the attacker will want to know when their target server has fallen. The students created a python script which printed to the user every two seconds if the server they selected is up or down. The script begins with five imports: os, time, socket, urllib2, and sys. Each of these allows the programmer to use special commands within the language. The program takes two inputs; the first is the ip address of the target and the second is the port of the target. The script is made of the function internet\_on. The program will continue to run through this function until it is manually stopped or the program times out. As shown in the figure below the program uses a try, except statement. The function will try to open the server at the port and if it can it will print that the port is up. If it cannot connect then it will print that the server is done. The code: \textit{time.sleep(2)} pauses the program for two seconds before running again.
 \pagebreak
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.35\textwidth]{ping.PNG}
     \caption{Python Code for Server Ping}
 \end{figure}
+
 \subsection{Creating a DDoS Attack}
+The final task for this lab was to create a Denial of Service attack and use that to take down other lab groups' webservers. Below is a portion of the full implementation.
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = \textwidth] {Attack-Headers.png}
+    \caption{DOS Machine Headers}
+\end{figure} \\
+
+\indent This section of the script creates a list of different machine IDs that will ultimately be used to request information from the targeted URL. Using this method gives the attack a better chance to bypass simple security measures put in place by the webserver, as each agent is chosen by random during the attack; overall, showing a level of human input within this automated process. \\
+This next section of the code shows the execution portion of the script.
+
+\begin{figure} [h!]
+    \centering
+    \includegraphics[width = \textwidth]{Attack-Execution.png}
+    \caption{DOS Execution Commands}
+\end{figure} \\
+
+This implementation first checks that the input arguments will suffice and not throw an error during execution. Next the program then starts the attack by printing an indication as well as the time of the attack. A third argument, "safe", can be input into the command line to have the attack stop after taking a server offline. This way the computer executing the attack won't over use its own resources. Finally the execution runs through a for loop 500 times. During each iteration, a threading service is used to drive the server requests. During these iterations, the program also monitors each request to and prints to standard out how many requests have been sent. This is an easy way for the lab students to know that the attack is properly sending requests to the target URL. These iterations continue on for an infinite amount of time, of until the server gets taken offline.
 
 \subsection{Battle Royale}
 During lab class of the third week of working on the lab each groups server will be tested to show the capabilities of their attack and defense. To test their defense all other groups will attack the server at once. The attack will last for a time specified by the TA. If the server is still running after this time then the group will have proven their defense works. To test the attack capabilities of the group, they will attack all the other groups once at a time and tally how many groups they are able to crash.  he attack will last for a time specified by the TA. If the server is not running after this time has expired then the group will have proven their attack works.
