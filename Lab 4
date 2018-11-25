@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\linespread{1}
+\setlength{\parindent}{0.5in}
+
+\newcommand\tab[1][0.5in]{\hspace*{#1}}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+
+% Cover
+\title{\vspace{-3cm}
+    \rule{\linewidth}{0.5mm} \\
+    \huge {ECE 256: Foundations of Cyber Security } \\ [18pt]
+    \large Lab 4: Buffer Overflow Attacks \\
+    \rule{\linewidth}{0.5mm} \\[0.25in]
+    \date{}
+}
+
+\begin{document}
+\clearpage\maketitle
+\begin{center}
+\Large We certify that this work is original and not a product of anyone’s work but our own \\ [1.25in]
+
+\noindent\begin{tabular}{ll}
+\centering
+    \makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+    \large{Adam Cunningham (acunningham3)} & \large{Julia Sorrentino (juliasorrentino)}\\[8ex]
+\end{tabular}
+\noindent\begin{tabular}{l}
+    \makebox[3in]{\hrulefill}\\
+    \large{Quintin Carvalho (Quintin Carvalho)}\\[20ex]
+\end{tabular}
+
+\date{\Large Submitted: November 26th, 2018 \\ \Large Due: November 26th, 2018} \\[1.25in]
+\thispagestyle{empty}
+\end{center} 
+
+% Contents
+\newpage\setcounter{page}{1} 
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+%Abstract
+\renewcommand*\abstractname{\Large\textbf{Abstract}}
+\begin{abstract}
+\setlength{\parindent}{0.5in}
+\linespread{1}\selectfont\normalsize\noindent
+\indent This lab report includes a basic introduction of the process of buffer overflow attacks and defense to the lab students. This lab consisted of three main parts completed over one week. The goal for the part was for the lab group to design a payload that allows the students (attackers) to change their account balance, based on that they know their PIN number. After the attack the account name and PIN must be the same. The second part requires students to change the target account's PIN. This attack should not change either of the account's balance. The third and final part requires the students to change the original code and make it more secure.
+
+\end{abstract}
+
+% Introduction
+\section{Introduction}
+A buffer overflow attack occurs when more data is put into a fixed-length buffer than the buffer can handle.
+
+%Methods
+\section{Methods and Procedures}
+This lab utilized Visual Studio to run a C program provided by the TA. The program emulated a bank as a possible program for the attacker to be able to change their PIN code. 
+
+\subsection{Payload}
+The first part of the lab requires students to change the attackers balance without changing the pin number or name. On the program given to students there is a comment in the testAttack function which says, \textit{your attack here}. This is where students should add their code to create their attack. By adding the line of code: \textit{changePin(\&attacker)} students are able to change the PIN more than once. After adding this line of code students should run the program without debugging. This will open up a terminal window which will display the two accounts pin numbers and beginning balances. The program will ask the user to enter their old pin. They should enter the attackers original pin number and press enter. Then the terminal will ask for the user to enter a new pin. This is where the students will overflow the input to change the account balance. As shown in figure 1 students should enter the attackers pin number followed by four random characters and then the target account's name. By overflowing the array pin which can just hold 4 digits will change the account balance. The students must also include the target's name due to the fact that this is deleted when the program is overflowed. the students should then use this new pin to change the pin back to its original four-digit code.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{part1.PNG}
+    \caption{Part 1 Terminal Display}
+\end{figure}
+
+\subsection{Change Target PIN}
+The second part of the lab requires students to change the target account's pin without changing their balance. Similar to part 1 the students will be calling the changePin function several times in the testAttack function. However, they will be calling it three extra times opposed to one extra time. In addition, the attack will happen when the pin is being changed, the same way it was in the first part. The first pin change should be in the order of the attackers four-digit pin, four random characters, the target's account name, fourteen characters, then the target's new four-digit pin. This will need to be inputted again when the program asks for the old pin. The second new pin should be in the order of the attackers four-digit pin, four random characters, and the target's account name. This will need to be inputted again when the program asks for the old pin. The final new pin should just be the attacker's four-digit pin. When the program asks for the old pin the user should type the four-digit pin followed by 20 random characters and then the attacker's account name. Upon completion of these steps the only changes to the accounts should be the attacker's balance and the target's pin. These steps can be seen in figure 2 below.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{part2.PNG}
+    \caption{Part 2 Terminal Display}
+\end{figure}
+
+\subsection{Increase Security}
+The final part of the lab requires students to improve the system by finding at least two different ways to make the code more secure. The students decided to add their security measures to the changePin function. First they nested the if statement inside a new if statement that checked to see if the variable holding the pin was more than four digits. If it is not exactly four-digits the program will print to the user that the pin must be four -digits and not let them type anything else in. The second change students made to the function is that the truncated the inputs to four digits. This means that if the user inputted "67890543" the program would only read "6789". Both of these changes can be seen in the code in figure 3 below. Overall, they both make the program more secure from buffer overflow attacks.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{changes.PNG}
+    \caption{Security Improvements}
+\end{figure}
+
+% Laboratory experimental results
+\section{Laboratory Experimental Results}
+This entire lab revolved around the use of the programming language, C/C++. The students knew that they had to overflow the array name which was 20 characters long, and pin which was 4 characters long. In addition, a floating point is only made up of 32 bits. These facts must be taken into account when attempting the attack. In the printAcct function pin, name and amount are all truncated. However, when printed the pin number has the ability to be more than four digits. The students also noticed weaknesses in the code. The main problem with using strcopy is that it does not check the bound so the student must write code to manually check the bounds. This is the reason that the students decided to limit the input of the old pin to four digits.
+Through full completion of this lab, the students have gained a great amount of experience using buffer overflow attacks.
+
+% Discussion
+\section{Discussion}
+
+Every piece of this lab required students to work with a C script. The students found themselves looking up a myriad of commands within the language such as scanf and strcpy. The command scanf terminates at white space. This must be taken into account when performing the attack due to the fact that the student cannot use spaces for the random characters used to fill up space. The main problem with using strcopy is that it does not check the bound so the student must write code to manually check the bounds. One of the changes mad to increase security involved truncating the input for pin. The only problem with truncating the pin is if the student enters the correct pin followed by random digits. The program will read the correct pin and ignore everything that follows. This lab requires a lot of research online as well as a lot of trial and error. Due to this it is very helpful to seek help from another group, the TA, or even the professor.
+
+% Conclusion
+\section{Conclusion}
+Although time consuming, this lab was found to be a simple look into buffer overflow attacks.
+
+% Recommendations
+\section{Recommendations}
+The students would highly recommend that every student 
+
+% Laboratory reflection
+\section{Laboratory reflection}
+I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal of time trying to teach myself how a buffer overflow attack works. Overall, this lab proved not that difficult after figuring out you can use changePin multiple times. The most difficult part of this lab was finding time to write the report over Thanksgiving break. 
+\newline\indent I, Adam Cunningham, 
+% References 
+\section{References}
+[1] Labs, Wallaroo. DDoS Attack Detection with Wallaroo: A Real-Time Time Series Analysis \newline \tab Example, blog.wallaroolabs.com/2017/11/ddos-attack-detection-with-wallaroo-a-real-\newline \tab time-time-series-analysis-example/.
+
+
+\noindent[2] “DoS (Denial of Service) Attack Tutorial: Ping of Death, DDOS.” Meet Guru99 - \newline \tab Free Training Tutorials & Video for IT Courses, www.guru99.com/ultimate-guide-to-dos\newline \tab -attacks.html.
+
+\noindent[3] Zamurai™. “How to DDoS Using Scripts (Python/Perl) *2018*.” YouTube, YouTube, 29 \newline \tab Sept. 2016, www.youtube.com/watch?v=kMsFlbPtSCI.		
+
+\newpage
+
+% Appendices
+\section{Appendix}
+
+
+
+\end{document}
