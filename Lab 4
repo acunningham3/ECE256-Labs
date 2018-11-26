@@ -78,6 +78,8 @@ The first part of the lab requires students to change the attackers balance with
 \subsection{Change Target PIN}
 The second part of the lab requires students to change the target account's pin without changing their balance. Similar to part 1 the students will be calling the changePin function several times in the testAttack function. However, they will be calling it three extra times opposed to one extra time. In addition, the attack will happen when the pin is being changed, the same way it was in the first part. The first pin change should be in the order of the attackers four-digit pin, four random characters, the target's account name, fourteen characters, then the target's new four-digit pin. This will need to be inputted again when the program asks for the old pin. The second new pin should be in the order of the attackers four-digit pin, four random characters, and the target's account name. This will need to be inputted again when the program asks for the old pin. The final new pin should just be the attacker's four-digit pin. When the program asks for the old pin the user should type the four-digit pin followed by 20 random characters and then the attacker's account name. Upon completion of these steps the only changes to the accounts should be the attacker's balance and the target's pin. These steps can be seen in figure 2 below.
 
+\newpage
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.45\textwidth]{part2.PNG}
