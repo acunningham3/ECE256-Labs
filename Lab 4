@@ -57,7 +57,10 @@
 
 % Introduction
 \section{Introduction}
-A buffer overflow attack occurs when more data is put into a fixed-length buffer than the buffer can handle.
+Discovered back in early 1972, [2] a buffer overflow is when data written to a buffer exceeds the buffer's boundaries and simultaneously writes to adjacent buffer memory locations. This can cause certain variables and/or actions to be overwritten. A hacker can use this exploit to input malicious code or abnormally change values to their liking. [2] With the earliest attack being one of the several exploits used by the Morris Worm in 1988. [2]\\
+\indent A code implementation can use a variation of different values; these values can be stored in adjacent memory addresses within the running system's memory. If one of these values exceeds their limit, and overflows, the remaining information will be put into the next adjacent memory address.\\
+\indent For instance, a programmer can create two variables, a character (char) variable, and a floating point (float) variable, next to each other. In the program memory the char will take up 8 bits in a targeted memory address. Since the float is declared after the character variable, the next 32 bits in the program memory will store the value of the float. If a value of 9 bits or higher is written into the char during run-time then the value of the remaining bit will overflow into the first bit of the float. Meaning a value that is 40 bits long will fill both variables if input into the character variable.\\
+\indent These exploits can be avoided by double checking code statements to make sure that any input buffers are limited. Omission of library functions such as: scanf, strcpy, and get. [1] These functions don't have boundary checks meaning a buffer overflow can occur without the aid of an if statement to help limit the value of information that can be input.
 
 %Methods
 \section{Methods and Procedures}
@@ -112,8 +115,12 @@ The students would highly recommend that every student
 \section{Laboratory reflection}
 I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal of time trying to teach myself how a buffer overflow attack works. Overall, this lab proved not that difficult after figuring out you can use changePin multiple times. The most difficult part of this lab was finding time to write the report over Thanksgiving break. 
 \newline\indent I, Adam Cunningham, 
+
 % References 
 \section{References}
+[1] “What Is a Buffer Overflow? Learn About Buffer Overrun Vulnerabilities, Exploits & Attacks,” CA Veracode, 25-Jul-2018. [Online]. Available: https://www.veracode.com/security/buffer-overflow. [Accessed: 25-Nov-2018].
+
+\noindent [2] Wikipedia contributors. Buffer overflow [Internet]. Wikipedia, The Free Encyclopedia; 2018 Nov 14, 03:51 UTC [cited 2018 Nov 26]. \\ Available: https://en.wikipedia.org/w/index.php?title=Buffer\_overflow&oldid=868739566.  [Accessed 25-Nov-2018].
 
 \newpage
 
