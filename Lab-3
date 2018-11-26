@@ -197,16 +197,15 @@ I, Adam Cunningham, found an immense amount of excite in programming and testing
 
 % References 
 \section{References}
-[1] Labs, Wallaroo. DDoS Attack Detection with Wallaroo: A Real-Time Time Series Analysis \newline \tab Example, blog.wallaroolabs.com/2017/11/ddos-attack-detection-with-wallaroo-a-real-\newline \tab time-time-series-analysis-example/.
+\noindent [1]“C Library Function - Scanf().” Www.tutorialspoint.com, Tutorials Point, www.tutorialspoint.com \newline \tab /c\_standard\_library/c\_function\_scanf.htm.
 
+\noindent [2] “The Strcpy() Function in C.” The Do While Loop in C - OverIQ.com, overiq.com/c-programming\newline \tab/101/the-strcpy-function-in-c/.
 
-\noindent[2] “DoS (Denial of Service) Attack Tutorial: Ping of Death, DDOS.” Meet Guru99 - \newline \tab Free Training Tutorials & Video for IT Courses, www.guru99.com/ultimate-guide-to-dos\newline \tab -attacks.html.
+\noindent [3] “What Is a Buffer Overflow? Learn About Buffer Overrun Vulnerabilities, Exploits & Attacks,”\newline \tab CA Veracode, 25-Jul-2018. [Online]. Available: https://www.veracode.com/security/buffer\newline \tab-overflow. [Accessed: 25-Nov-2018].
 
-\noindent[3] Ruslan's Blog - Lets Build a Web server
-\newline \tab https://ruslanspivak.com/lsbaws-part1/
-
-\noindent[4] Zamurai™. “How to DDoS Using Scripts (Python/Perl) *2018*.” YouTube, YouTube, 29 \newline \tab Sept. 2016, www.youtube.com/watch?v=kMsFlbPtSCI.
-
+\noindent [4] Wikipedia contributors. Buffer overflow [Internet]. Wikipedia, The Free Encyclopedia; 2018
+\newline \tab Nov 14, 03:51 UTC [cited 2018 Nov 26]. Available: https://en.wikipedia.org/w/index.php?
+\newline \tab title=Buffer\_overflow&oldid=868739566.  [Accessed 25-Nov-2018].
 \newpage
 
 % Appendices
