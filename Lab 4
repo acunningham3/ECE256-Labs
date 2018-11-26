@@ -114,7 +114,7 @@ The students would highly recommend that every student
 % Laboratory reflection
 \section{Laboratory reflection}
 I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal of time trying to teach myself how a buffer overflow attack works. Overall, this lab proved not that difficult after figuring out you can use changePin multiple times. The most difficult part of this lab was finding time to write the report over Thanksgiving break. 
-\newline\indent I, Adam Cunningham, 
+\newline\indent I, Adam Cunningham, underwent several hours of trial and error with these directed buffer overflow tasks. I knew the final part of the lab, the security improvements, would be simple; since it would consist of adding an if statement to limit the number of characters that can be inserted into the changePin function. So I went to work on the first two components of the first lab. I also knew that the solution of the first part would lead to a similar solution of the second (both having to do with changing certain values using the overflow). I knew beforehand that a buffer overflow is the leakage of bits in memory addresses, so, using Visual Studio, I figured out how to monitor the memory addresses and where the variables were put into the memory by the program. I could then see what values would be changed corresponding to the value I put in on the terminal. Unfortunately, the trial and error ran our group in circles as we couldn't figure out how to append the variables with null characters. Thus, a roadblock was hit and no progress was made.
 
 % References 
 \section{References}
