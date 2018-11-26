@@ -107,16 +107,17 @@ Every piece of this lab required students to work with a C script. The students 
 
 % Conclusion
 \section{Conclusion}
-Although time consuming, this lab was found to be a simple look into buffer overflow attacks.
+This lab provided a good insight into the utilization and understanding of a simple buffer overflow attack. It was shown that a buffer overflow attack is successful due to it's ability to simply exploit a software coding mistake and gain access to a system. When there is more data in a buffer then it can handle it overflows into adjacent storage. Cybercriminals can then exploit the overflow, which corrupts or overwrites the adjacent memory, by either running arbitrary code or manipulating the coding errors to implement malicious actions such as altering the execution path of an application. Failing to allocate large enough buffers and neglecting to check for buffer overflow problems within the code is the most common causes for buffer overflow. It was found that avoiding standard library functions such as scanf and strcpy helps with preventing buffer overflow because these functions are not bound checked. Vigilant coding, regular testing, and bounds checking at run time are all good solutions for preventing buffer overflow attacks.
 
 % Recommendations
 \section{Recommendations}
-The students would highly recommend that every student 
+It is highly recommended that every student has some sort of practice dealing with buffer overflow attacks either trying to implement one to inject malicious code or taking measures against it. Having knowledge of this attack will benefit students in the future especially if they will be writing code that requires a higher degree of security.
 
 % Laboratory reflection
 \section{Laboratory reflection}
 I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal of time trying to teach myself how a buffer overflow attack works. A great deal of time was spent inputting different amount of characters to figure out how many were needed to overflow the space. This trial and error method was very tedious and time consuming, however in the end I found it to be an effective means of completing this lab. Overall, this lab proved not that difficult after figuring out you can use changePin multiple times. The most difficult part of this lab was finding time to write the report over Thanksgiving break. 
 \newline\indent I, Adam Cunningham, underwent several hours of trial and error with these directed buffer overflow tasks. I knew the final part of the lab, the security improvements, would be simple; since it would consist of adding an if statement to limit the number of characters that can be inserted into the changePin function. So I went to work on the first two components of the first lab. I also knew that the solution of the first part would lead to a similar solution of the second (both having to do with changing certain values using the overflow). I knew beforehand that a buffer overflow is the leakage of bits in memory addresses, so, using Visual Studio, I figured out how to monitor the memory addresses and where the variables were put into the memory by the program. I could then see what values would be changed corresponding to the value I put in on the terminal. Unfortunately, the trial and error ran our group in circles as we couldn't figure out how to append the variables with null characters. Thus, a roadblock was hit and no progress was made.
+\newline\indent I, Quintin Carvalho, spent hours researching buffer overflow attacks and learning to use various useful virtual studio tools to monitor memory addresses which allowed me then alter my attack procedures based on what I recorded. This was by far my favorite lab because I found it to be the most hands on and intuitive. I have learned a lot while working on this lab and recommend other students to do the same.
 
 % References 
 \section{References}
