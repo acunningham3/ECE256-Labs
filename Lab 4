@@ -155,6 +155,16 @@ I, Julia Sorrentino, found this lab difficult to complete. I spent a great deal 
 % Appendices
 \section{Appendix}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics{original.PNG}
+    \caption{The student's original attempts at changing the attacker account balance. As shown, the problem occurs when the other values change undesirably}
+\end{figure}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 500]{memory.PNG}
+    \caption{A place in memory where the variables are all stored; as known by the attacker and target ASCII on the right}
+\end{figure}
 
 \end{document}
