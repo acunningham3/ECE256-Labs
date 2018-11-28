@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\linespread{1}
+\setlength{\parindent}{0.5in}
+
+\newcommand\tab[1][0.5in]{\hspace*{#1}}
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+
+% Cover
+\title{\vspace{-3cm}
+    \rule{\linewidth}{0.5mm} \\
+    \huge {ECE 256: Foundations of Cyber Security } \\ [18pt]
+    \large Lab 5: Code Injections \\
+    \rule{\linewidth}{0.5mm} \\[0.25in]
+    \date{}
+}
+
+\begin{document}
+\clearpage\maketitle
+\begin{center}
+\Large We certify that this work is original and not a product of anyone’s work but our own \\ [1.25in]
+
+\noindent\begin{tabular}{ll}
+\centering
+    \makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+    \large{Adam Cunningham (acunningham3)} & \large{Julia Sorrentino (juliasorrentino)}\\[8ex]
+\end{tabular}
+\noindent\begin{tabular}{l}
+    \makebox[3in]{\hrulefill}\\
+    \large{Quintin Carvalho (Quintin Carvalho)}\\[20ex]
+\end{tabular}
+
+\date{\Large Submitted: December 10, 2018 \\ \Large Due: December 10, 2018} \\[1.25in]
+\thispagestyle{empty}
+\end{center} 
+
+% Contents
+\newpage\setcounter{page}{1} 
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+%Abstract
+\renewcommand*\abstractname{\Large\textbf{Abstract}}
+\begin{abstract}
+\setlength{\parindent}{0.5in}
+\linespread{1}\selectfont\normalsize\noindent
+\indent This lab report includes a basic introduction of the process of 
+
+\end{abstract}
+
+% Introduction
+\section{Introduction}
+
+
+%Methods
+\section{Methods and Procedures}
+
+
+% Laboratory experimental results
+\section{Laboratory Experimental Results}
+
+
+% Discussion
+\section{Discussion}
+
+
+% Conclusion
+\section{Conclusion}
+
+
+% Recommendations
+\section{Recommendations}
+
+% Laboratory reflection
+\section{Laboratory reflection}
+I, Julia Sorrentino, 
+\newline\indent I, Adam Cunningham, 
+\newline\indent I, Quintin Carvalho,
+% References 
+\section{References}
+
+\newpage
+
+% Appendices
+\section{Appendix}
+
+
+
+\end{document}
