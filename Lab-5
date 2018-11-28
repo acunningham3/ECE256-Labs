@@ -51,7 +51,7 @@
 \begin{abstract}
 \setlength{\parindent}{0.5in}
 \linespread{1}\selectfont\normalsize\noindent
-\indent This lab report involves using a free emulator, VisualBoy Advance, in conjunction with the ROM for the game Powder. Through the use of these resources students will complete two main tasks. First, explore the memory by value to find the memory locations of the values displayed on the bottom of the main screen. Secondly, design cheats to make the character invincible. The students should make the game so that anyone could play it and beat it.
+\indent This lab report involves using a free emulator, VisualBoy Advance, in conjunction with the ROM for the game Powder. The goal of the game is to make it to level 25 in the dungeon to reach Baezl'bub. The user must slay him and return to the surface with his black heart. Through the use of these resources students will complete two main tasks. First, explore the memory by value to find the memory locations of the values displayed on the bottom of the main screen. Secondly, design cheats to make the character invincible. The students should make the game so that anyone could play it and beat it.
 \end{abstract}
 
 % Introduction
