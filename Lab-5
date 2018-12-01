@@ -75,7 +75,7 @@ Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 
 
 % Discussion
 \section{Discussion}
-
+The students believed that they had found the location of the dungeon level (0200B7C0), however when this was changed the dungeon level did not change. Instead a fuzzy, black box was placed over the character, similar to what is over rooms in the dungeon when the character is not in them. The students could not figure out why this happened.
 
 % Conclusion
 \section{Conclusion}
@@ -83,7 +83,7 @@ Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 
 
 % Recommendations
 \section{Recommendations}
-The students would recommend to find the location of the health first. This will make the character invincible and allow them to look for other locations without risking dying and starting the game over. In addition, it is highly recommended to use the save state and load state features on the emulator. This will help the student if they get stuck, or somehow die, to not lose all of their progress. When the student is on their way back to the surface they should use the mini map to view their location and the location of the ladders. The character is represented as a white square while the ladders are represented by dark green squares. This will save a lot of time that would have been spent wandering around in a blind search.
+The students would recommend to find the location of the health first. This will make the character invincible and allow them to look for other locations without risking dying and starting the game over. In addition, it is highly recommended to use the save state and load state features on the emulator. This will help the student if they get stuck, or somehow die, to not lose all of their progress. The memory locations change each time a new game is started. Therefore by being able to save and load the game students will not lose their progress in what memory locations they have found. When the student is on their way back to the surface they should use the mini map to view their location and the location of the ladders. The character is represented as a white square while the ladders are represented by dark green squares. This will save a lot of time that would have been spent wandering around in a blind search. 
 
 % Laboratory reflection
 \section{Laboratory reflection}
