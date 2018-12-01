@@ -72,6 +72,25 @@ To figure out how to use cheats to beat the game students will want to make use 
 \section{Laboratory Experimental Results}
 Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re spawn.
 
+\begin{table}[]
+\begin{tabular}{l|l|ll|l}
+\hline
+MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  &  \\ \hline
+0200B7D0       & FF        & HEALTH           &  &  \\
+0200B7D1       & 71        & HEALTH BIT 2     &  &  \\
+0200B7D4       & FF        & MAGIC LEVEL      &  &  \\
+0200B7D5       & 75        & MAGIC BIT 2      &  &  \\
+0200B7D8       & FF        & EXPERIENCE LEVEL      &  &  \\
+0200D249       & FF        & SCROLL XYZZY     &  &  \\
+0200FA69      & FF        & SCROLL OF FOL LORCS     &  &  \\
+02013621      & FF        & ERA WEB SCROLL      &  &  \\
+0201AA09       & FF        & CYAN POTION      &  &  \\
+0201AC08      & FF        & SPIDER HEALTH      &  &  \\
+02023E50      & FF        & SLUG HEALTH      &  &  \\
+\end{tabular}
+\caption{List of Memory Addresses Found}
+\label{my-label}
+\end{table}
 
 % Discussion
 \section{Discussion}
