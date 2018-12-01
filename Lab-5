@@ -60,10 +60,17 @@
 
 %Methods
 \section{Methods and Procedures}
+Students will want to begin by playing the tutorial. This will allow them to get used to the controls of the game. The students will be able to move their character using the arrow keys. To attack a creature simply walk into it. Hold s to view the mini map, this is especially helpful when going back to the surface from level 25. The backspace opens/closes the inventory, use w to select an item to place on the character. The enter key opens the menu bar as well as starts the game. Due to the fact that the students are using a game boy emulator several keys act as the keys on the game boy; a=z, b=x, l=a and r=x. 
 
+\subsection{Explore Memory}
+The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select WRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game.
+
+\subsection{Play in GOD Mode}
+To figure out how to use cheats to beat the game students will want to make use of several tools on the emulator. In addition to the memory viewer and the find cheats windows the students should use the list cheats menu which is next to the find cheats option. The list cheats will show the memory locations that the user has changed and what they were changed to. This is useful to change those memory locations to the highest possible value or to delete changes to memory that were not what the students thought they were.
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
+Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re spawn.
 
 
 % Discussion
@@ -76,6 +83,7 @@
 
 % Recommendations
 \section{Recommendations}
+The students would recommend to find the location of the health first. This will make the character invincible and allow them to look for other locations without risking dying and starting the game over. In addition, it is highly recommended to use the save state and load state features on the emulator. This will help the student if they get stuck, or somehow die, to not lose all of their progress. When the student is on their way back to the surface they should use the mini map to view their location and the location of the ladders. The character is represented as a white square while the ladders are represented by dark green squares. This will save a lot of time that would have been spent wandering around in a blind search.
 
 % Laboratory reflection
 \section{Laboratory reflection}
