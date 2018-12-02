@@ -52,6 +52,7 @@
 \setlength{\parindent}{0.5in}
 \linespread{1}\selectfont\normalsize\noindent
 \indent This lab report involves using a free emulator, VisualBoy Advance, in conjunction with the ROM for the game Powder. The goal of the game is to make it to level 25 in the dungeon to reach Baezl'bub. The user must slay him and return to the surface with his black heart. Through the use of these resources students will complete two main tasks. First, explore the memory by value to find the memory locations of the values displayed on the bottom of the main screen. Secondly, design cheats to make the character invincible. The students should make the game so that anyone could play it and beat it.
+
 \end{abstract}
 
 % Introduction
@@ -60,7 +61,7 @@
 
 %Methods
 \section{Methods and Procedures}
-Students will want to begin by playing the tutorial. This will allow them to get used to the controls of the game. The students will be able to move their character using the arrow keys. To attack a creature simply walk into it. Hold s to view the mini map, this is especially helpful when going back to the surface from level 25. The backspace opens/closes the inventory, use w to select an item to place on the character. The enter key opens the menu bar as well as starts the game. Due to the fact that the students are using a game boy emulator several keys act as the keys on the game boy; a=z, b=x, l=a and r=x. 
+Students will want to begin by playing the tutorial. This will allow them to get used to the controls of the game. The students will be able to move their character using the arrow keys. To attack a creature simply walk into it. Hold s to view the mini map, this is especially helpful when going back to the surface from level 25. The backspace opens/closes the inventory, use w to select an item to place on the character. The enter key opens the menu bar as well as starts the game. Due to the fact that the students are using a game boy emulator several keys act as the keys on the game boy; a = z, b = x, l = a and r = x. 
 
 \subsection{Explore Memory}
 The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select WRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game.
@@ -72,7 +73,7 @@ To figure out how to use cheats to beat the game students will want to make use 
 \section{Laboratory Experimental Results}
 Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re spawn.
 
-\begin{table}[]
+\begin{table}[h!]
 \begin{tabular}{l|l|ll|l}
 \hline
 MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  &  \\ \hline
@@ -106,7 +107,7 @@ The students would recommend to find the location of the health first. This will
 
 % Laboratory reflection
 \section{Laboratory reflection}
-I, Julia Sorrentino, 
+I, Julia Sorrentino, enjoyed completing this lab although it was time consuming. I spent a great deal of time trying to find different memory locations, however there were several times that I thought I had found the correct address, but when it was changed the game froze or nothing happened. I spent the greatest amount of time trying to kill the creatures that would attack my character. Looking back, I should have developed more cheats before attempting to beat the game, due to the fact that it took me over three hours. Overall, I enjoyed the concept of this lab.
 \newline\indent I, Adam Cunningham, 
 \newline\indent I, Quintin Carvalho,
 % References 
