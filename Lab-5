@@ -61,7 +61,10 @@
 
 %Methods
 \section{Methods and Procedures}
-Students will want to begin by playing the tutorial. This will allow them to get used to the controls of the game. The students will be able to move their character using the arrow keys. To attack a creature simply walk into it. Hold s to view the mini map, this is especially helpful when going back to the surface from level 25. The backspace opens/closes the inventory, use w to select an item to place on the character. The enter key opens the menu bar as well as starts the game. Due to the fact that the students are using a game boy emulator several keys act as the keys on the game boy; a = z, b = x, l = a and r = x. 
+First and foremost, the lab group became acquainted with the controls of the game through playing the game itself as well as the included tutorial within the game. Powder works as follows: The character moves around in a linear, single space direction. Monsters that lay in the path will be automatically attacked if the player is within one space. Monsters can also hurt the player if they become too close. Seen items can be picked up by placing the character on top of it and using the automatically generated menu to either pick up the item or to ignore it. Some items in this game are good for the player, while others are not. \\
+\indent Powder is an emulated game that has been developed for the Game Boy Advance console. The chosen emulator for this lab is Visual Boy Advance, an emulator that can run Game Boy Advance games. This means that the controls on a regular Game Boy Advance console - A, B, Select, Start, Right Trigger, Left Trigger, and the Directional Pad - are mapping to a default of keys on the computer keyboard. The Z key is A, the X key is B, the A key is Left Trigger, the S key is Right Trigger, the Backspace key is Select, and the Enter key is Start. The Arrow keys on the keyboard are mapped to the Directional Pad respectively, and the Escape key will also completely close out the game. \\
+\indent In Powder the keys correspond to different things. The S key opens the mini-map, the Backspace key opens/closes the inventory, the Enter key pauses the game. These three keys, alone with the Arrow keys, were mainly used to traverse the game effectively. \\
+\indent Since this game is being emulated on the Visual Boy Advance, the group of students have even more tools at their fingertips. For the purpose of this lab, the emulator's Cheat Finder and Memory Viewer proved very usual in completing the assigned tasks. Another tool that proved helpful were save states. These states can save the game in the current state that it is in and later be returned to. This is very useful for when the character unexpectedly dies or the game crashes; mainly helping to return to where the students were last at as to not waste time creating a new game every time this happened.
 
 \subsection{Explore Memory}
 The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select WRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game.
@@ -110,6 +113,7 @@ The students would recommend to find the location of the health first. This will
 I, Julia Sorrentino, enjoyed completing this lab although it was time consuming. I spent a great deal of time trying to find different memory locations, however there were several times that I thought I had found the correct address, but when it was changed the game froze or nothing happened. I spent the greatest amount of time trying to kill the creatures that would attack my character. Looking back, I should have developed more cheats before attempting to beat the game, due to the fact that it took me over three hours. Overall, I enjoyed the concept of this lab.
 \newline\indent I, Adam Cunningham, 
 \newline\indent I, Quintin Carvalho,
+
 % References 
 \section{References}
 
@@ -117,7 +121,6 @@ I, Julia Sorrentino, enjoyed completing this lab although it was time consuming.
 
 % Appendices
 \section{Appendix}
-
 
 
 \end{document}
