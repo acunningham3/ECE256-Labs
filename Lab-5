@@ -155,5 +155,11 @@ I, Julia Sorrentino, enjoyed completing this lab although it was time consuming.
 % Appendices
 \section{Appendix}
 
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 350]{Pictures/win4.PNG}
+    \caption{Proof of Win}
+    \label{fig:my_label}
+\end{figure} \\
 
 \end{document}
