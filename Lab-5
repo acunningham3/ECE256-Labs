@@ -4,6 +4,8 @@
 \usepackage{times}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \linespread{1}
 \setlength{\parindent}{0.5in}
@@ -67,10 +69,41 @@ First and foremost, the lab group became acquainted with the controls of the gam
 \indent Since this game is being emulated on the Visual Boy Advance, the group of students have even more tools at their fingertips. For the purpose of this lab, the emulator's Cheat Finder and Memory Viewer proved very usual in completing the assigned tasks. Another tool that proved helpful were save states. These states can save the game in the current state that it is in and later be returned to. This is very useful for when the character unexpectedly dies or the game crashes; mainly helping to return to where the students were last at as to not waste time creating a new game every time this happened.
 
 \subsection{Explore Memory}
-The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select WRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game.
+The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select WRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game. Upon using this memory search engine it was found that each of these bottom values are adjacent in memory. Shown below is the main trial and error memory testing used to find specific cheats and memory addresses. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 350]{Pictures/Memory-Testing.PNG}
+    \caption{Memory viwer window}
+    \label{fig:my_label}
+\end{figure} \\
+
+\indent Starting at memory address 0x00000020 the students plugged in a value of 0xFF to each of the memory addresses. As this was done the students checked the game for distinguishable changes. Most of the time this method made the game crash and the students needed to reload the game.
 
 \subsection{Play in GOD Mode}
-To figure out how to use cheats to beat the game students will want to make use of several tools on the emulator. In addition to the memory viewer and the find cheats windows the students should use the list cheats menu which is next to the find cheats option. The list cheats will show the memory locations that the user has changed and what they were changed to. This is useful to change those memory locations to the highest possible value or to delete changes to memory that were not what the students thought they were.
+Playing in GOD mode refers to having infinite health during play-time and not being able to die. So, this change mainly refers to the health of the player. Knowing this the students used the Find Cheats tool within the emulator. First searching for the base value health that the player spawns with (15) and then monitoring that value as it changes. This means the students will need to have some damage done to them to search for a second value. If this value of 15 was to go down to 11 from a monster attacking the character, then the students would then search for 11 in the Find Cheats tool. This next search will help to pinpoint the specific memory address that holds this health value. Upon multiple searches the students were able to find the memory address 0x0200B7D0. Since this memory address is an 8-bit value, a maximum hex value of 0xFF can be put into the address. In binary this translates to 255. Changing the value to 0xFF it can be seen that the in game health changes from 15 to 255 as expected. A pleasant side effect of this change is that the health value will stay at 255 even if the player is hurt. Below are screen shots of this change. \\
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Pictures/Health-15.PNG}
+  \caption{Starting health of 15}
+  \label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.98\linewidth]{Pictures/Health-255.PNG}
+  \caption{Cheated health of 255}
+  \label{fig:sub2}
+\end{subfigure}
+\caption{Changing the character's health using memory address values}
+\label{fig:test}
+\end{figure}
+
+\indent It should be noted that these memory addresses can change. The students noticed that the address for health changed between 0x0200B7D0 and 0x0200B7F0. \\
+
+\subsection{Giving The Player Items}
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
