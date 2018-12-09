@@ -137,6 +137,8 @@ The use of being able to give the player any item is an exceptionally easy way t
     0x0200C069              & 0xFF        & 0xFF         & Inventory Slots       \\
     0x0200C079              & 0x3B        & 0x01         & Row 2 Inventory Items \\
     \hline
+    \caption{Inventory memory addresses}
+    \label(tab:my_table)
     \end{tabular}
 \end{table} \\
 
@@ -190,7 +192,7 @@ MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  \\ \hline
 \hline
 \end{tabular}
 \caption{List of Memory Addresses Found}
-\label{my-label}
+\label{mtab:my_table}
 \end{table}
 
 % Discussion
