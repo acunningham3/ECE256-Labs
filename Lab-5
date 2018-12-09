@@ -193,7 +193,8 @@ MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  &  \\ \hline
 
 % Discussion
 \section{Discussion}
-The students believed that they had found the location of the dungeon level (0200B7C0), however when this was changed the dungeon level did not change. Instead a fuzzy, black box was placed over the character, similar to what is over rooms in the dungeon when the character is not in them. The students could not figure out why this happened.
+The students believed that they had found the location of the dungeon level (0200B7C0), however when this was changed the dungeon level did not change. Instead a fuzzy, black box was placed over the character, similar to what is over rooms in the dungeon when the character is not in them. The students could not figure out why this happened. Further investigation of this memory address did not prove useful in changing the level that the player was. The students needed to find another way to beat the game within easily in one sitting. \\
+\indent The memory addresses liked to move around a lot, usually with each new game. This made finding the memory addresses on a new game a hassle. Sometimes anticipated addresses wouldn't be in the spot that the students thought they would be in, meaning time needed to be taken to find these new spots in memory.
 
 % Conclusion
 \section{Conclusion}
@@ -206,7 +207,7 @@ The students would recommend to find the location of the health first. This will
 % Laboratory reflection
 \section{Laboratory reflection}
 I, Julia Sorrentino, enjoyed completing this lab although it was time consuming. I spent a great deal of time trying to find different memory locations, however there were several times that I thought I had found the correct address, but when it was changed the game froze or nothing happened. I spent the greatest amount of time trying to kill the creatures that would attack my character. Looking back, I should have developed more cheats before attempting to beat the game, due to the fact that it took me over three hours. Overall, I enjoyed the concept of this lab.
-\newline\indent I, Adam Cunningham, 
+\newline\indent I, Adam Cunningham, really liked this lab. I remember back in the days of online flash games I became very experienced with the use of a program named Cheat Engine. This tool is much like the cheat finder tool in the emulator. It would search through changing values in memory addresses to find the one that I wanted to change. Mainly I would use this for simple games such as the Bloons Tower Defense games about 6 years ago. Other things that reminded me of this lab was the GameShark cheating tool for the Game Boy Advance. I used this to cheat in the game Pokemon Emerald back in middle school. Something I saw at the time is that each cheat used an addresses and hex value in the format Address:Hex. I never knew what this meant or why it worked at the time, I only cared about the fact that it worked how I expected it to. Thanks to this lab I finally understand how these cheats work on a basic level.
 \newline\indent I, Quintin Carvalho,
 
 % References 
