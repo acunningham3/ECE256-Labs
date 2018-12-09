@@ -172,20 +172,22 @@ Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 
 \indent Below is a table showing all of the important memory addresses found. Changing the values of each of these memory addresses would change important things within the game itself, most of the time to the advantage of the player.
 
 \begin{table}[h!]
-\begin{tabular}{l|l|ll|l}
+\begin{tabular}{|l|l|ll|l|}
 \hline
-MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  &  \\ \hline
-0200B7D0       & FF        & HEALTH           &  &  \\
-0200B7D1       & 71        & HEALTH BIT 2     &  &  \\
-0200B7D4       & FF        & MAGIC LEVEL      &  &  \\
-0200B7D5       & 75        & MAGIC BIT 2      &  &  \\
-0200B7D8       & FF        & EXPERIENCE LEVEL      &  &  \\
-0200D249       & FF        & SCROLL XYZZY     &  &  \\
-0200FA69      & FF        & SCROLL OF FOL LORCS     &  &  \\
-02013621      & FF        & ERA WEB SCROLL      &  &  \\
-0201AA09       & FF        & CYAN POTION      &  &  \\
-0201AC08      & FF        & SPIDER HEALTH      &  &  \\
-02023E50      & FF        & SLUG HEALTH      &  &  \\
+MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  \\ \hline
+0200B7D0       & FF        & HEALTH           &  \\
+0200B7D1       & 71        & HEALTH BIT 2     &  \\
+0200B7D4       & FF        & MAGIC LEVEL      &  \\
+0200B7D5       & 75        & MAGIC BIT 2      &  \\
+0200B7D8       & FF        & EXPERIENCE LEVEL      &  \\
+0200D249       & FF        & SCROLL XYZZY     &  \\
+0200FA69      & FF        & SCROLL OF FOL LORCS     &  \\
+02013621      & FF        & ERA WEB SCROLL      &  \\
+0201AA09       & FF        & CYAN POTION      &  \\
+0201AC08      & FF        & SPIDER HEALTH      &  \\
+02023E50      & FF        & SLUG HEALTH      &  \\
+0200C059        & 82        & Change first slot item into heart & \\
+\hline
 \end{tabular}
 \caption{List of Memory Addresses Found}
 \label{my-label}
