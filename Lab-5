@@ -167,6 +167,10 @@ Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 
     \label{fig:my_label}
 \end{figure}
 
+\newpage
+
+\indent Below is a table showing all of the important memory addresses found. Changing the values of each of these memory addresses would change important things within the game itself, most of the time to the advantage of the player.
+
 \begin{table}[h!]
 \begin{tabular}{l|l|ll|l}
 \hline
