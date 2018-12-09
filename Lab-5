@@ -104,10 +104,68 @@ Playing in GOD mode refers to having infinite health during play-time and not be
 \indent It should be noted that these memory addresses can change. The students noticed that the address for health changed between 0x0200B7D0 and 0x0200B7F0. \\
 
 \subsection{Giving The Player Items}
+The use of being able to give the player any item is an exceptionally easy way to beat a game of any kind. In Powder the player can find a myriad of items through the chambers that the player traverses. The final item, the Heart of Baezl'Bub, is the ultimate item needed to be able to complete the game. \\
+\indent Since each item doesn't have a specific in-game value to keep track of, finding the memory addresses of certain items can not be found using the emulator's cheat finding tool. Thus, the students turned to trial and error with the emulator's memory viewer tool. Below is a screen shot of this trial and error used. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 300]{Pictures/Memory-Testing.PNG}
+    \caption{A memory block that has been changed with 0xFF and 0x00 values}
+    \label{fig:my_label}
+\end{figure} \\
+
+\newpage
+  
+\indent As seen above, the top part of the memory addresses, as well as toward the middle, have been changed with random values. In this situation the students were changing a small portion of the memory addresses at a time and then checking back at the game to see what has changed. The game would either malfunction, crash, or just not change at all. Toward testing near the addresses that contained the health and other important character information the lab students were able to find the addresses that contain the information of the inventory as well as the items within it. This next screen shot shows the setup of the memory addresses for the inventory. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 300]{Pictures/Item-Giving-Memory-Addresses.PNG}
+    \caption{Memory addresses that pertain to in-game inventory}
+    \label{fig:my_label}
+\end{figure} \\
+
+\indent Near the middle of the screen shot it can be seen that the addresses have a certain pattern to them. This pattern appears to be a setup of two 0xFF values and then two random values below. The students theorize that the two 0xFF addresses contain the design and outline of the inventory, as changing any of these values will remove the outlines from the inventory and crash the game. Take for example the table below.
+
+\begin{table}[h!]
+\centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Starting Memory Address & First Value & Second Value & In-Game               \\ \hline
+    0x0200C049              & 0xFF        & 0xFF         & Inventory Slots       \\
+    0x0200C059              & 0x82        & 0x01         & Row 1 Inventory Items \\
+    0x0200C069              & 0xFF        & 0xFF         & Inventory Slots       \\
+    0x0200C079              & 0x3B        & 0x01         & Row 2 Inventory Items \\
+    \hline
+    \end{tabular}
+\end{table} \\
+
+\indent Changing the values of the inventory items (0x0200C059) will change the first item of the players inventory. This value can be between 0x01 and 0x87. In this instance, the value is at 0x82. This value corresponds with the item value for The Heart of Baezl'Bub.
+
+\subsubsection{Beating the Game at the Start}
+
+Since the students now know how to manipulate the correct memory addresses to obtain any item they would like, it is easy to complete the game within 30 seconds. At the start of the game the students would need to find the memory addresses that contain the inventory pattern talked about in the previous section of this lab report. These addresses can vary in their positioning in memory but are almost always near the addresses for health. Next the first inventory slot item value would need to be changed to 0x82. This value will then change the first slot starting item to the Heart as shown below. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 350]{Pictures/Heart.PNG}
+    \caption{The Heart of Baezl'Bub at the start of the game}
+    \label{fig:my_label}
+\end{figure} \\
+
+Now that the Heart is obtained the player can climb up the ladder to the surface. This can be done off the start because the game does not check for other variables such as: playtime or spaces moved or monsters slain. It only checks whether or not the player has the heart in their inventory.
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
-Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re spawn.
+Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re spawn. This first approach, completing the game completely with a minimal amount of cheats, proved useful with learning the games mechanics. \\
+\indent Through using the information found from beating the game the first time, the students were then able to find the more advanced cheats to help beat the game almost instantly. This screen shot shows the students beating the game in 30 seconds; something that would be completely impossible without the help of cheats. \\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 350]{Pictures/Beating-The-Game.PNG}
+    \caption{Beating Powder in 30 seconds}
+    \label{fig:my_label}
+\end{figure}
 
 \begin{table}[h!]
 \begin{tabular}{l|l|ll|l}
