@@ -59,7 +59,7 @@
 
 % Introduction
 \section{Introduction}
-
+Rom Hacking is the process of modifying a ROM image (usually of a video game) to alter the game's graphics, dialogue, levels, game play, and/or other elements. Before you start ROM hacking it is important that you are familiar with binary or hexadecimal. Binary is the fundamental building block of the computer and thus inherently the building block of ROM hacking. Binary can be painstaking to deal with however, An alternative form "Hexidecimal" can be used instead. Most consoles that came before the "PlayStation era" are what we call tile based systems. Tile based systems output images through an 8 by 8 pixel square area called a tile. Text is drawn to the screen the same way graphics are through tiles. Each Tile based graphics and game components are stored and written to memory address buffers. These buffers can be manipulated (deleted or changed) through injecting code right to the desired buffer. In order too view and modify the code in the ROM game you must use a program called cheat engine. Cheat engine is a program in which allows you to scan addresses, change values, search process memory and allows you to edit stuff you wouldn't usually be able to edit. In doing this you can therefore modify the game how you want and play in what is called "God" mode, where you are invulnerable and free to beat the game with barley any effort whatsoever. 
 
 %Methods
 \section{Methods and Procedures}
@@ -69,7 +69,7 @@ First and foremost, the lab group became acquainted with the controls of the gam
 \indent Since this game is being emulated on the Visual Boy Advance, the group of students have even more tools at their fingertips. For the purpose of this lab, the emulator's Cheat Finder and Memory Viewer proved very usual in completing the assigned tasks. Another tool that proved helpful were save states. These states can save the game in the current state that it is in and later be returned to. This is very useful for when the character unexpectedly dies or the game crashes; mainly helping to return to where the students were last at as to not waste time creating a new game every time this happened.
 
 \subsection{Explore Memory}
-The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select WRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game. Upon using this memory search engine it was found that each of these bottom values are adjacent in memory. Shown below is the main trial and error memory testing used to find specific cheats and memory addresses. \\
+The bottom of the window shows information about the character. The first part of the lab requires students to find the memory locations of these values. The memory viewer allows students to view all of the memory addresses of the game and change them. When viewing the memory student will want to select VRAM from the drop down menu as well as change the display to 8-bit. To access the memory viewer students should go to tools-\textgreater cheats-\textgreater memory viewer. In addition, students should use the find cheats window by going to tools-\textgreater cheats-\textgreater find cheats. This window will allow them to search for specific changes in the memory to pinpoint specific memory locations. Note, that this window cannot remain open when playing the game. Upon using this memory search engine it was found that each of these bottom values are adjacent in memory. Shown below is the main trial and error memory testing used to find specific cheats and memory addresses. \\
 
 \begin{figure}[h!]
     \centering
@@ -137,9 +137,9 @@ The use of being able to give the player any item is an exceptionally easy way t
     0x0200C069              & 0xFF        & 0xFF         & Inventory Slots       \\
     0x0200C079              & 0x3B        & 0x01         & Row 2 Inventory Items \\
     \hline
-    \caption{Inventory memory addresses}
-    \label(tab:my_table)
     \end{tabular}
+    \caption{Inventory memory addresses}
+    \label{tab:my_table}
 \end{table} \\
 
 \indent Changing the values of the inventory items (0x0200C059) will change the first item of the players inventory. This value can be between 0x01 and 0x87. In this instance, the value is at 0x82. This value corresponds with the item value for The Heart of Baezl'Bub.
@@ -159,7 +159,7 @@ Now that the Heart is obtained the player can climb up the ladder to the surface
 
 % Laboratory experimental results
 \section{Laboratory Experimental Results}
-Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re spawn. This first approach, completing the game completely with a minimal amount of cheats, proved useful with learning the games mechanics. \\
+Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 seconds. After defeating Baezl'bub the students encountered several problems on the way back to the surface. Most notably the narrator said the character must \textit{"Learn Humility"} and turned them into a slug or spider on several occasions. This proved an issue because the memory location for the health changed. This required the students to search for the new health location in order to make themselves invincible again. In addition, around level 11 on the way back to the surface the student's character was killed several times because it was turned to stone. To avoid this the students had to change the route they took to get to the next ladder. The students found the most time consuming aspect to be killing the creatures that appeared in their path. As the students were approaching hell more and more creatures appeared on each level, however on the way back to the surface it appeared that these enemies did not re-spawn. This first approach, completing the game completely with a minimal amount of cheats, proved useful with learning the games mechanics. \\
 \indent Through using the information found from beating the game the first time, the students were then able to find the more advanced cheats to help beat the game almost instantly. This screen shot shows the students beating the game in 30 seconds; something that would be completely impossible without the help of cheats. \\
 
 \begin{figure}[h!]
@@ -167,32 +167,33 @@ Overall, the students were able to beat the game in 3 hours, 10 minutes, and 20 
     \includegraphics[width = 350]{Pictures/Beating-The-Game.PNG}
     \caption{Beating Powder in 30 seconds}
     \label{fig:my_label}
-\end{figure}
+\end{figure} \\
 
 \newpage
 
 \indent Below is a table showing all of the important memory addresses found. Changing the values of each of these memory addresses would change important things within the game itself, most of the time to the advantage of the player.
 
 \begin{table}[h!]
+\centering
 \begin{tabular}{|l|l|ll|l|}
 \hline
-MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS &  \\ \hline
-0200B7D0       & FF        & HEALTH           &  \\
-0200B7D1       & 71        & HEALTH BIT 2     &  \\
-0200B7D4       & FF        & MAGIC LEVEL      &  \\
-0200B7D5       & 75        & MAGIC BIT 2      &  \\
-0200B7D8       & FF        & EXPERIENCE LEVEL      &  \\
-0200D249       & FF        & SCROLL XYZZY     &  \\
-0200FA69      & FF        & SCROLL OF FOL LORCS     &  \\
-02013621      & FF        & ERA WEB SCROLL      &  \\
-0201AA09       & FF        & CYAN POTION      &  \\
-0201AC08      & FF        & SPIDER HEALTH      &  \\
-02023E50      & FF        & SLUG HEALTH      &  \\
+MEMORY ADDRESS & NEW VALUE & WHAT IT CONTROLS       &  \\ \hline
+0200B7D0        & FF        & HEALTH                &  \\
+0200B7D1        & 71        & HEALTH BIT 2          &  \\
+0200B7D4        & FF        & MAGIC LEVEL           &  \\
+0200B7D5        & 75        & MAGIC BIT 2           &  \\
+0200B7D8        & FF        & EXPERIENCE LEVEL      &  \\
+0200D249        & FF        & SCROLL XYZZY          &  \\
+0200FA69        & FF        & SCROLL OF FOL LORCS   &  \\
+02013621        & FF        & ERA WEB SCROLL        &  \\
+0201AA09        & FF        & CYAN POTION           &  \\
+0201AC08        & FF        & SPIDER HEALTH         &  \\
+02023E50        & FF        & SLUG HEALTH           &  \\ 
 0200C059        & 82        & Change first slot item into heart & \\
 \hline
 \end{tabular}
 \caption{List of Memory Addresses Found}
-\label{mtab:my_table}
+\label{tab:my_table}
 \end{table}
 
 % Discussion
@@ -202,7 +203,7 @@ The students believed that they had found the location of the dungeon level (020
 
 % Conclusion
 \section{Conclusion}
-
+It is important to know how to manipulate memory addresses and how the code traverses throughout the memory in order to have control of a program or game to do what you want. Through manipulating the the code in the memory you can change how things look (graphics/text) how the game functions (mechanics) and if you modify it enough create an what seems like an entirely new game. Programs such as Cheat Engine are powerful tools because they make memory manipulation that much easier to locate specific addresses and inject your code. When you have control of what code goes where in the games very important memory structure you in turn become very powerful and can now play the game in what we call "god" mode where even your grandparents could beat the game.
 
 % Recommendations
 \section{Recommendations}
@@ -212,11 +213,16 @@ The students would recommend to find the location of the health first. This will
 \section{Laboratory reflection}
 I, Julia Sorrentino, enjoyed completing this lab although it was time consuming. I spent a great deal of time trying to find different memory locations, however there were several times that I thought I had found the correct address, but when it was changed the game froze or nothing happened. I spent the greatest amount of time trying to kill the creatures that would attack my character. Looking back, I should have developed more cheats before attempting to beat the game, due to the fact that it took me over three hours. Overall, I enjoyed the concept of this lab.
 \newline\indent I, Adam Cunningham, really liked this lab. I remember back in the days of online flash games I became very experienced with the use of a program named Cheat Engine. This tool is much like the cheat finder tool in the emulator. It would search through changing values in memory addresses to find the one that I wanted to change. Mainly I would use this for simple games such as the Bloons Tower Defense games about 6 years ago. Other things that reminded me of this lab was the GameShark cheating tool for the Game Boy Advance. I used this to cheat in the game Pokemon Emerald back in middle school. Something I saw at the time is that each cheat used an addresses and hex value in the format Address:Hex. I never knew what this meant or why it worked at the time, I only cared about the fact that it worked how I expected it to. Thanks to this lab I finally understand how these cheats work on a basic level.
-\newline\indent I, Quintin Carvalho,
+\newline\indent I, Quintin Carvalho, really enjoyed this lab not only because it involved video games, but because it really gave me a good insight on how memory and code work hand-in-hand to perform tasks such as running a video game. I was always interested in learning how video games worked and this lab helped allot. Through researching and playing around with the game and cheat engine I gained a better understanding on how games worked and what was actually going on behind the scenes. I would recommend every student take part in this lab or one similar to it because it would help further their skills in coding and developing their own games. 
+
 
 % References 
 \section{References}
-
+1.) https://wiki.cheatengine.org/index.php?title=Help-File:Memory-view 
+\newline\newline
+2.) https://medium.com/@qrazhan/rom-hacking-for-fun-and-profit-8da983849ffa
+\newline\newline
+3.) https://forums.anandtech.com/threads/programming-for-the-game-boy.2232927/
 \newpage
 
 % Appendices
@@ -229,4 +235,6 @@ I, Julia Sorrentino, enjoyed completing this lab although it was time consuming.
     \label{fig:my_label}
 \end{figure} \\
 
+
 \end{document}
+
